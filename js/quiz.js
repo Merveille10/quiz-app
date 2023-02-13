@@ -7,6 +7,8 @@ window.addEventListener('load', ()=>{
     const answers = document.querySelectorAll("#btn_a");
     const total_quiz = document.querySelector("#total_quiz");
     const suivant = document.querySelector("#suivant");
+    const reset = document.querySelector(".icon");
+    const score = document.querySelector("#score");
 
     let quizIndex = 0;
     let quiz = data[quizIndex];
@@ -16,7 +18,8 @@ window.addEventListener('load', ()=>{
     
     // functions
    
-   const showQuiz=(quiz)=>{
+   const showQuiz=(quizIndex)=>{
+        quiz = data[quizIndex];
         let suggestedAnswers = quiz.suggestedAnswer;
         question.innerHTML = quiz.question;
         currentQuiz.innerHTML = quiz.id;
@@ -27,7 +30,7 @@ window.addEventListener('load', ()=>{
     }
 
     //code
-    showQuiz(quiz);
+    showQuiz(quizIndex);
 
     suivant.addEventListener('click',()=> {
         quizIndex++;
@@ -36,10 +39,20 @@ window.addEventListener('load', ()=>{
             suivant.style.cursor = "default";
             suivant.style.opacity = 0.5;
         }
-        quiz = data[quizIndex];
-        showQuiz(quiz);
+        showQuiz(quizIndex);
     }); 
-    
+
+    reset.addEventListener('click',()=> {
+        
+        suivant.disabled = false;
+        suivant.style.cursor = "pointer";
+        suivant.style.opacity = 1;
+        quizIndex = 0;
+        showQuiz(quizIndex);
+        score.innerHTML = "0";
+        
+    });
+
     
     console.log(data.length);
     total_quiz.innerHTML = data.length;
