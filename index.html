@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Quiz app</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="icon">
+                <i class="fa-solid fa-arrows-spin"></i>
+            </button>
+            <div class="score">
+                <span>Score </span>
+                <span>100</span>
+            </div>
+        </div>
+        <div class="quizz">
+            <p id="question">What does HTML stand for ?</p>
+        </div>
+        <div class="section">
+            <div class="answer_wrapper">
+                <button class="answer_button answer_suggested" id="btn_a">A: HyperText Markup Language</button>
+                <button class="answer_button answer_suggested" id="btn_a">B: sit amet consectetur</button>
+                <button class="answer_button answer_suggested" id="btn_a">C: Lorem ipsum dolor</button>
+                <button class="answer_button answer_suggested" id="btn_a">D: adipisicing elit</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="quiz_progress">
+                <span id="current_quiz">12</span>
+                <span>/</span>
+                <span id="total_quiz">00</span>
+            </div>
+        </div>
+        
+        <button class="suivant">Suivant</button>
+
+    </div>
+    
+    <!-- We add type="module" to allow import statement in quiz.js -->
+    <script src="./js/quiz.js" type="module"></script>
+</body>
+</html>
