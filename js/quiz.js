@@ -28,8 +28,8 @@ window.addEventListener('load', ()=>{
         currentQuiz.innerHTML = quiz.id;
         suggestedAnswers.forEach(({answer, label, isRight}, index) => {
             // answers[index].innerHTML = label + ": " + answer;
-            /*answers[index].innerHTML = `${label}: ${answer}`;
-            if (isRight) {
+            answers[index].innerHTML = `${label}: ${answer}`;
+            /*if (isRight) {
                 answers[index].addEventListener('click', ()=>{
                     answers[index].classList.add("answer_good");
                 })
