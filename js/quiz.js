@@ -28,7 +28,7 @@ window.addEventListener('load', ()=>{
         currentQuiz.innerHTML = quiz.id;
         suggestedAnswers.forEach(({answer, label, isRight}, index) => {
             // answers[index].innerHTML = label + ": " + answer;
-            answers[index].innerHTML = `${label}: ${answer}`;
+            /*answers[index].innerHTML = `${label}: ${answer}`;
             if (isRight) {
                 answers[index].addEventListener('click', ()=>{
                     answers[index].classList.add("answer_good");
@@ -38,13 +38,13 @@ window.addEventListener('load', ()=>{
                  answers[index].addEventListener('click', ()=>{
                     answers[index].classList.add("answer_wrong");
                 })
-            }
+            }*/
             
         });
     };
 
     
-    /*const typeAnswer=(quizIndex)=>{
+    const typeAnswer=(quizIndex)=>{
         quiz = data[quizIndex];
         suggestedAnswers = quiz.suggestedAnswer;
         suggestedAnswers.forEach(({answer, label, isRight}, index) => {
@@ -59,11 +59,11 @@ window.addEventListener('load', ()=>{
                 })
             }    
         })
-    }*/
+    }
 
     //code
     showQuiz(quizIndex);
-    /*typeAnswer(quizIndex);*/
+    typeAnswer(quizIndex);
    
 
     suivant.addEventListener('click',()=> {
@@ -80,7 +80,7 @@ window.addEventListener('load', ()=>{
             suivant.style.opacity = 0.5;
         }
         showQuiz(quizIndex);
-        /*typeAnswer(quizIndex);*/
+        typeAnswer(quizIndex);
     }); 
 
     reset.addEventListener('click',()=> {
