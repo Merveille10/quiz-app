@@ -33,7 +33,7 @@ export const data = [
             {
                 label: "A",
                 answer: "Langage de programmation",
-                isRight:false
+                isRight: false
             },
             {
                 label: "B",
